@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mix */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  background-color: #1e2d3b;
+}
+
+/* Typo */
+h3 {
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 13px;
+}
+
+h4, h5 {
+  color: #77797a;
+  font-weight: normal;
+}
+
+header {
+  background-color: #2E3A46;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+header img {
+  height: 50px;
+}
+header select {
+  padding: 5px;
+  border: 0;
+  width: 150px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #abb0b5;
+}
+header select option {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #abb0b5;
+}
+header select:focus {
+  outline: none;
+}
+header select:hover {
+  color: #fff;
+}
+
+main {
+  height: calc(100% - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 80px;
+}
+
+.disk {
+  background-color: #2E3A46;
+  height: 270px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: center;
+  margin: 12px;
+}
+.disk img {
+  width: 100%;
+}

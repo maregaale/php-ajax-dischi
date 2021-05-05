@@ -1,0 +1,15 @@
+.disk {
+  background-color: $primaryColorHeaderAndDisk;
+  height: 270px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  text-align: center;
+  margin: 12px;
+  
+  img {
+    width: 100%;
+  }
+}

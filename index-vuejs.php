@@ -24,7 +24,7 @@
     <!-- vueJs -->
 
     <!-- foglio di stile -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
 
