@@ -1,7 +1,3 @@
-<?php 
-  include __DIR__ . '/partials/database.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,6 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <!-- /font-awesome -->
 
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- /axios -->
+
+    <!-- vueJs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- vueJs -->
+
     <!-- foglio di stile -->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -30,17 +34,16 @@
       </header>
 
       <main>
-        <!-- dischi -->
-        <?php foreach ($disks as $key => $disk) { ?>
-          <div class="disk">
-            <img src="<?php echo $disk['poster']; ?>" alt="<?php echo $disk['title']; ?>">
-            <h3><?php echo $disk['title']; ?></h3>
-            <h4><?php echo $disk['author']; ?></h4>
-            <h5><?php echo $disk['year']; ?></h5>
-          </div>
-        <?php } ?>
-        <!-- /dischi -->
+        <div v-for="disk in disks" class="disk">
+          <img :src="disk.poster" alt="disk.title">
+          <h3>{{ disk.title }}</h3>
+          <h4>{{ disk.author }}</h4>
+          <h5>{{ disk.year }}</h5>
+        </div>
       </main>
     </div>
+
+  <!-- fogli javascript -->
+  <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
